@@ -1,0 +1,9 @@
+torch
+torchaudio
+transformers
+accelerate
+sentencepiece
+openai-whisper
+sounddevice
+soundfile
+python-dotenv
