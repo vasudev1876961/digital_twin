@@ -7,3 +7,16 @@ openai-whisper
 sounddevice
 soundfile
 python-dotenv
+fastapi
+uvicorn
+streamlit
+chromadb
+gTTS
+sentence-transformers
+pydantic
+google-generativeai
+pydub
+numpy
+jinja2
+python-multipart
+pypdf
