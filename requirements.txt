@@ -20,3 +20,4 @@ numpy
 jinja2
 python-multipart
 pypdf
+static-ffmpeg

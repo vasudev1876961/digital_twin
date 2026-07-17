@@ -42,6 +42,8 @@ class EmbeddingModel:
         Generate embedding for a single text.
         """
         self.load_model()
+        if isinstance(text, str):
+            text = text.encode("utf-8", "ignore").decode("utf-8", "ignore")
         if self._initialized and self.model is not None:
             # sentence-transformers encode returns a numpy array
             return self.model.encode(text).tolist()
@@ -57,7 +59,11 @@ class EmbeddingModel:
         """
         self.load_model()
         if self._initialized and self.model is not None:
-            embeddings = self.model.encode(texts)
+            cleaned_texts = [
+                t.encode("utf-8", "ignore").decode("utf-8", "ignore") if isinstance(t, str) else t
+                for t in texts
+            ]
+            embeddings = self.model.encode(cleaned_texts)
             return embeddings.tolist()
         else:
             logger.warning("Embedding model not loaded. Returning dummy embeddings list.")

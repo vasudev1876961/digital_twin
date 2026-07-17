@@ -7,7 +7,7 @@ logger = get_logger("gemini_model")
 class GeminiModel:
     def __init__(self):
         self.api_key = Config.GEMINI_API_KEY
-        self.model_name = "gemini-1.5-flash"
+        self.model_name = "gemini-3.5-flash"
         self._model = None
         self._initialized = False
 

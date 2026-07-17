@@ -1,0 +1,213 @@
+[2026-07-14 09:06:20,397] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-14 09:06:20,440] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-14 09:10:03,070] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-14 09:10:03,251] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-14 09:11:01,954] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-14 09:11:01,979] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:00:51,416] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:00:51,440] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:04:44,883] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:04:44,888] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:04:44,891] INFO [digital_twin.main:main.py:45] - Shutting down Digital Human Twin API...
+[2026-07-17 08:04:50,648] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:04:50,653] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:04:50,656] INFO [digital_twin.main:main.py:45] - Shutting down Digital Human Twin API...
+[2026-07-17 08:06:53,673] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:06:53,677] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:06:53,677] INFO [digital_twin.main:main.py:45] - Shutting down Digital Human Twin API...
+[2026-07-17 08:07:16,927] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:07:16,932] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:07:52,100] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:07:52,100] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:08:12,452] INFO [digital_twin.routes_documents:documents.py:43] - Uploaded file saved to: C:\Users\vasud\OneDrive\Desktop\digital-human-twin\documents\notes\ai-engineering.pdf
+[2026-07-17 08:08:12,452] INFO [digital_twin.routes_documents:documents.py:46] - Triggering RAG database update...
+[2026-07-17 08:08:12,452] INFO [digital_twin.rag_pipeline:rag_pipeline.py:29] - Initializing ChromaDB client at: database/chroma
+[2026-07-17 08:08:14,336] INFO [digital_twin.rag_pipeline:rag_pipeline.py:33] - ChromaDB initialized successfully.
+[2026-07-17 08:08:14,337] INFO [digital_twin.rag_pipeline:rag_pipeline.py:45] - Starting document ingestion process...
+[2026-07-17 08:08:24,869] INFO [digital_twin.rag_pipeline:rag_pipeline.py:78] - Generated 37 chunks for ai-engineering.pdf
+[2026-07-17 08:10:03,631] INFO [digital_twin.embedding_model:embedding_model.py:21] - Loading embedding model 'BAAI/bge-large-en-v1.5' on device cpu...
+[2026-07-17 08:12:36,653] WARNING [digital_twin.embedding_model:embedding_model.py:27] - Failed to load primary embedding model 'BAAI/bge-large-en-v1.5': Cannot send a request, as the client has been closed.
+[2026-07-17 08:12:36,656] INFO [digital_twin.embedding_model:embedding_model.py:28] - Attempting to load fallback model 'all-MiniLM-L6-v2'...
+[2026-07-17 08:12:55,998] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:12:55,998] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:12:55,998] INFO [digital_twin.main:main.py:45] - Shutting down Digital Human Twin API...
+[2026-07-17 08:13:19,091] INFO [digital_twin.routes_documents:documents.py:43] - Uploaded file saved to: C:\Users\vasud\OneDrive\Desktop\digital-human-twin\documents\notes\software_developer.pdf
+[2026-07-17 08:13:19,091] INFO [digital_twin.routes_documents:documents.py:46] - Triggering RAG database update...
+[2026-07-17 08:13:19,091] INFO [digital_twin.rag_pipeline:rag_pipeline.py:45] - Starting document ingestion process...
+[2026-07-17 08:13:28,354] INFO [digital_twin.rag_pipeline:rag_pipeline.py:78] - Generated 37 chunks for ai-engineering.pdf
+[2026-07-17 08:13:28,354] INFO [digital_twin.embedding_model:embedding_model.py:21] - Loading embedding model 'BAAI/bge-large-en-v1.5' on device cpu...
+[2026-07-17 08:13:38,802] INFO [digital_twin.embedding_model:embedding_model.py:25] - Primary embedding model loaded successfully.
+[2026-07-17 08:13:38,818] ERROR [digital_twin.routes_documents:documents.py:56] - Failed to upload document: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+[2026-07-17 08:14:19,647] INFO [digital_twin.persona_engine:persona_engine.py:40] - Created default persona profile at: C:\Users\vasud\OneDrive\Desktop\digital-human-twin\personality\personality_profiles\vasu.json
+[2026-07-17 08:14:19,675] INFO [digital_twin.long_term_memory:long_term_memory.py:22] - Saved long-term fact to SQLite: hobby
+[2026-07-17 08:14:19,696] INFO [digital_twin.long_term_memory:long_term_memory.py:22] - Saved long-term fact to SQLite: status
+[2026-07-17 08:14:19,759] INFO [digital_twin.long_term_memory:long_term_memory.py:22] - Saved long-term fact to SQLite: favourite_project
+[2026-07-17 08:14:19,783] INFO [digital_twin.long_term_memory:long_term_memory.py:22] - Saved long-term fact to SQLite: location
+[2026-07-17 08:14:19,803] INFO [digital_twin.long_term_memory:long_term_memory.py:22] - Saved long-term fact to SQLite: skills
+[2026-07-17 08:14:19,825] INFO [digital_twin.long_term_memory:long_term_memory.py:22] - Saved long-term fact to SQLite: twin_status
+[2026-07-17 08:14:19,995] INFO [digital_twin.memory_manager:memory_manager.py:94] - Retrieved 0 memory references.
+[2026-07-17 08:14:20,006] WARNING [digital_twin.gemini_model:gemini_model.py:19] - GEMINI_API_KEY is not set in environment. Gemini client will run in mock mode.
+[2026-07-17 08:14:20,006] WARNING [digital_twin.gemini_model:gemini_model.py:39] - Gemini client not initialized. Returning mock response.
+[2026-07-17 08:14:20,012] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:14:20,012] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:14:20,028] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:14:20,044] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:14:20,054] ERROR [digital_twin.routes_chat:chat.py:100] - Chat execution failed: ExplainabilityEngine.create_explanation() got an unexpected keyword argument 'confidence'
+[2026-07-17 08:15:41,026] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:15:41,033] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:15:41,035] INFO [digital_twin.main:main.py:45] - Shutting down Digital Human Twin API...
+[2026-07-17 08:16:15,747] WARNING [digital_twin.gemini_model:gemini_model.py:19] - GEMINI_API_KEY is not set in environment. Gemini client will run in mock mode.
+[2026-07-17 08:16:15,747] WARNING [digital_twin.gemini_model:gemini_model.py:39] - Gemini client not initialized. Returning mock response.
+[2026-07-17 08:16:15,747] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:16:15,747] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:16:15,762] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:16:15,778] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:16:15,778] ERROR [digital_twin.routes_chat:chat.py:100] - Chat execution failed: ExplainabilityEngine.create_explanation() got an unexpected keyword argument 'confidence'
+[2026-07-17 08:16:43,454] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:16:43,465] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:16:57,316] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu
+[2026-07-17 08:16:57,322] INFO [digital_twin.gemini_model:gemini_model.py:23] - Initializing Gemini API client...
+[2026-07-17 08:16:57,322] INFO [digital_twin.gemini_model:gemini_model.py:27] - Gemini API client initialized successfully.
+[2026-07-17 08:16:57,322] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 234
+[2026-07-17 08:16:58,100] ERROR [digital_twin.gemini_model:gemini_model.py:62] - Gemini API content generation failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+[2026-07-17 08:16:58,103] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:16:58,104] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:16:58,118] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:16:58,137] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:17:53,837] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:17:53,841] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:18:07,538] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu
+[2026-07-17 08:18:07,546] INFO [digital_twin.gemini_model:gemini_model.py:23] - Initializing Gemini API client...
+[2026-07-17 08:18:07,546] INFO [digital_twin.gemini_model:gemini_model.py:27] - Gemini API client initialized successfully.
+[2026-07-17 08:18:07,547] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 531
+[2026-07-17 08:18:08,398] ERROR [digital_twin.gemini_model:gemini_model.py:62] - Gemini API content generation failed: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.
+[2026-07-17 08:18:08,398] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:18:08,401] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:18:08,412] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:18:08,423] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:18:24,037] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:18:24,042] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:18:37,817] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu
+[2026-07-17 08:18:37,817] INFO [digital_twin.gemini_model:gemini_model.py:23] - Initializing Gemini API client...
+[2026-07-17 08:18:37,821] INFO [digital_twin.gemini_model:gemini_model.py:27] - Gemini API client initialized successfully.
+[2026-07-17 08:18:37,821] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 791
+[2026-07-17 08:18:38,553] ERROR [digital_twin.gemini_model:gemini_model.py:62] - Gemini API content generation failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 20.344148581s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 20
+}
+]
+[2026-07-17 08:18:38,555] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:18:38,556] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:18:38,568] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:18:38,582] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:19:42,055] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:19:42,065] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:19:55,446] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu
+[2026-07-17 08:19:55,451] INFO [digital_twin.gemini_model:gemini_model.py:23] - Initializing Gemini API client...
+[2026-07-17 08:19:55,451] INFO [digital_twin.gemini_model:gemini_model.py:27] - Gemini API client initialized successfully.
+[2026-07-17 08:19:55,451] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 2523
+[2026-07-17 08:20:04,996] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:20:05,001] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:20:05,152] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:20:05,167] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:20:29,261] INFO [digital_twin.main:main.py:33] - Starting up Digital Human Twin API...
+[2026-07-17 08:20:29,274] INFO [digital_twin.main:main.py:39] - Database connection established successfully.
+[2026-07-17 08:20:59,295] INFO [digital_twin.routes_documents:documents.py:43] - Uploaded file saved to: C:\Users\vasud\OneDrive\Desktop\digital-human-twin\documents\resume\Vasudeva.pdf
+[2026-07-17 08:20:59,295] INFO [digital_twin.routes_documents:documents.py:46] - Triggering RAG database update...
+[2026-07-17 08:20:59,295] INFO [digital_twin.rag_pipeline:rag_pipeline.py:29] - Initializing ChromaDB client at: database/chroma
+[2026-07-17 08:21:00,280] INFO [digital_twin.rag_pipeline:rag_pipeline.py:33] - ChromaDB initialized successfully.
+[2026-07-17 08:21:00,280] INFO [digital_twin.rag_pipeline:rag_pipeline.py:45] - Starting document ingestion process...
+[2026-07-17 08:21:01,398] INFO [digital_twin.rag_pipeline:rag_pipeline.py:78] - Generated 2 chunks for Vasudeva.pdf
+[2026-07-17 08:21:33,860] INFO [digital_twin.embedding_model:embedding_model.py:21] - Loading embedding model 'BAAI/bge-large-en-v1.5' on device cpu...
+[2026-07-17 08:21:43,761] INFO [digital_twin.embedding_model:embedding_model.py:25] - Primary embedding model loaded successfully.
+[2026-07-17 08:22:10,826] INFO [digital_twin.rag_pipeline:rag_pipeline.py:78] - Generated 37 chunks for ai-engineering.pdf
+[2026-07-17 08:22:10,860] ERROR [digital_twin.routes_documents:documents.py:56] - Failed to upload document: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+[2026-07-17 08:22:35,707] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu
+[2026-07-17 08:22:35,805] INFO [digital_twin.memory_manager:memory_manager.py:94] - Retrieved 0 memory references.
+[2026-07-17 08:22:35,805] INFO [digital_twin.gemini_model:gemini_model.py:23] - Initializing Gemini API client...
+[2026-07-17 08:22:35,805] INFO [digital_twin.gemini_model:gemini_model.py:27] - Gemini API client initialized successfully.
+[2026-07-17 08:22:35,805] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 38
+[2026-07-17 08:22:40,626] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:22:40,626] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:22:40,642] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:22:40,661] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:22:41,384] WARNING [digital_twin.xtts_model:xtts_model.py:25] - XTTS reference audio not found at: voice_samples\reference\vasu_ref.wav. Will use default voice fallback.
+[2026-07-17 08:22:41,384] INFO [digital_twin.xtts_model:xtts_model.py:27] - Checking for local Coqui TTS installation...
+[2026-07-17 08:22:41,384] WARNING [digital_twin.xtts_model:xtts_model.py:39] - Could not load local XTTS-v2 model (No module named 'TTS'). Falling back to gTTS.
+[2026-07-17 08:22:41,399] INFO [digital_twin.xtts_model:xtts_model.py:48] - Synthesizing voice (Mode: gTTS) for text: 'Hey there! 
+
+Basically, this i...'
+[2026-07-17 08:22:56,115] INFO [digital_twin.audio_utils:audio_utils.py:49] - Converting .mp3 to WAV using pydub
+[2026-07-17 08:22:56,158] ERROR [digital_twin.audio_utils:audio_utils.py:56] - Audio conversion failed: [WinError 2] The system cannot find the file specified
+[2026-07-17 08:22:56,158] ERROR [digital_twin.xtts_model:xtts_model.py:81] - Failed to convert gTTS output to WAV.
+[2026-07-17 08:22:56,158] ERROR [digital_twin.routes_audio:audio.py:87] - Synthesize endpoint failed: 500: Text-to-Speech synthesis failed.
+[2026-07-17 08:23:50,055] INFO [digital_twin.memory_manager:memory_manager.py:94] - Retrieved 1 memory references.
+[2026-07-17 08:23:50,055] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 815
+[2026-07-17 08:24:58,981] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:24:58,981] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 508
+[2026-07-17 08:25:08,905] WARNING [digital_twin.response_validator:response_validator.py:59] - Hallucination checker flagged response: Claims in response are not supported by the knowledge base.
+[2026-07-17 08:25:08,985] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:25:09,001] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:25:41,289] INFO [digital_twin.memory_manager:memory_manager.py:94] - Retrieved 1 memory references.
+[2026-07-17 08:25:41,290] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 945
+[2026-07-17 08:25:46,685] INFO [digital_twin.response_validator:response_validator.py:23] - Running response validation layer...
+[2026-07-17 08:25:46,685] INFO [digital_twin.gemini_model:gemini_model.py:43] - Generating content for prompt with len: 508
+[2026-07-17 08:25:52,763] INFO [digital_twin.response_validator:response_validator.py:67] - Response validation passed. Confidence: 0.95
+[2026-07-17 08:25:52,771] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from user to short-term database & session memory.
+[2026-07-17 08:25:52,787] INFO [digital_twin.memory_manager:memory_manager.py:38] - Saved message from assistant to short-term database & session memory.
+[2026-07-17 08:25:53,230] WARNING [digital_twin.xtts_model:xtts_model.py:25] - XTTS reference audio not found at: voice_samples\reference\vasu_ref.wav. Will use default voice fallback.
+[2026-07-17 08:25:53,238] INFO [digital_twin.xtts_model:xtts_model.py:27] - Checking for local Coqui TTS installation...
+[2026-07-17 08:25:53,238] WARNING [digital_twin.xtts_model:xtts_model.py:39] - Could not load local XTTS-v2 model (No module named 'TTS'). Falling back to gTTS.
+[2026-07-17 08:25:53,238] INFO [digital_twin.xtts_model:xtts_model.py:48] - Synthesizing voice (Mode: gTTS) for text: 'I don't have enough informatio...'
+[2026-07-17 08:25:54,485] INFO [digital_twin.audio_utils:audio_utils.py:49] - Converting .mp3 to WAV using pydub
+[2026-07-17 08:25:54,525] ERROR [digital_twin.audio_utils:audio_utils.py:56] - Audio conversion failed: [WinError 2] The system cannot find the file specified
+[2026-07-17 08:25:54,525] ERROR [digital_twin.xtts_model:xtts_model.py:81] - Failed to convert gTTS output to WAV.
+[2026-07-17 08:25:54,525] ERROR [digital_twin.routes_audio:audio.py:87] - Synthesize endpoint failed: 500: Text-to-Speech synthesis failed.
+[2026-07-17 08:34:12,207] ERROR [digital_twin.pdf_loader:pdf_loader.py:22] - Error parsing PDF file ai-engineering.pdf: [Errno 2] No such file or directory: 'C:\\Users\\vasud\\OneDrive\\Desktop\\digital-human-twin\\documents\\resume\\ai-engineering.pdf'
+[2026-07-17 08:34:30,602] INFO [digital_twin.embedding_model:embedding_model.py:21] - Loading embedding model 'BAAI/bge-large-en-v1.5' on device cpu...
+[2026-07-17 08:34:39,114] INFO [digital_twin.embedding_model:embedding_model.py:25] - Primary embedding model loaded successfully.
+[2026-07-17 08:35:22,355] INFO [digital_twin.embedding_model:embedding_model.py:21] - Loading embedding model 'BAAI/bge-large-en-v1.5' on device cpu...
+[2026-07-17 08:35:31,459] INFO [digital_twin.embedding_model:embedding_model.py:25] - Primary embedding model loaded successfully.

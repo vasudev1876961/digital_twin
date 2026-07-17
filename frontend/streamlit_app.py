@@ -66,7 +66,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
 </style>
-""", unsafe_allowed_value=True)
+""", unsafe_allow_html=True)
 
 # API Configuration
 API_BASE_URL = "http://127.0.0.1:8000"
@@ -83,7 +83,7 @@ if "synthesized_audio" not in st.session_state:
 
 # Sidebar Configuration
 with st.sidebar:
-    st.markdown("<h2 style='color: #60a5fa;'>⚙️ Twin Control Panel</h2>", unsafe_allowed_value=True)
+    st.markdown("<h2 style='color: #60a5fa;'>⚙️ Twin Control Panel</h2>", unsafe_allow_html=True)
     
     # Engine Settings
     st.subheader("Module Settings")
@@ -107,13 +107,17 @@ with st.sidebar:
                 try:
                     files = {"file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)}
                     params = {"category": doc_category}
-                    r = httpx.post(f"{API_BASE_URL}/documents/upload", files=files, params=params, timeout=30.0)
+                    r = httpx.post(f"{API_BASE_URL}/documents/upload", files=files, params=params, timeout=None)
                     if r.status_code == 200:
                         st.success(f"Indexed: {uploaded_file.name}")
                         # Refresh documents list
                         st.rerun()
                     else:
-                        st.error(f"Error: {r.json().get('detail', 'Unknown error')}")
+                        try:
+                            error_detail = r.json().get('detail', 'Unknown error')
+                        except Exception:
+                            error_detail = r.text
+                        st.error(f"Error {r.status_code}: {error_detail}")
                 except Exception as e:
                     st.error(f"Failed to connect to API: {str(e)}")
 
@@ -138,15 +142,15 @@ with st.sidebar:
         st.warning("Start API server to list documents.")
 
 # Main Application Layout
-st.markdown("<h1 class='main-title'>👤 Digital Human Twin</h1>", unsafe_allowed_value=True)
-st.markdown("<p class='subtitle'>Vasu's Personalized AI Replica - Context-Aware, Memory-Enabled & Cloned Voice</p>", unsafe_allowed_value=True)
+st.markdown("<h1 class='main-title'>👤 Digital Human Twin</h1>", unsafe_allow_html=True)
+st.markdown("<p class='subtitle'>Vasu's Personalized AI Replica - Context-Aware, Memory-Enabled & Cloned Voice</p>", unsafe_allow_html=True)
 
 # Layout Columns
 col_chat, col_explain = st.columns([3, 2])
 
 # Left Column: Chat Interaction
 with col_chat:
-    st.markdown("<h3 style='color: #60a5fa;'>💬 Talk to Vasu's Replica</h3>", unsafe_allowed_value=True)
+    st.markdown("<h3 style='color: #60a5fa;'>💬 Talk to Vasu's Replica</h3>", unsafe_allow_html=True)
     
     # Display Chat Log
     chat_container = st.container(height=450)
@@ -243,13 +247,17 @@ if len(st.session_state.chat_history) > 0 and st.session_state.chat_history[-1][
                 
                 st.rerun()
             else:
-                st.error("Failed to generate response from API server.")
+                try:
+                    error_detail = res.json().get('detail', 'Unknown error')
+                except Exception:
+                    error_detail = res.text
+                st.error(f"Failed to generate response from API server (Error {res.status_code}): {error_detail}")
         except Exception as e:
             st.error(f"Could not connect to API server: {str(e)}")
 
 # Right Column: Explainability & Meta Dashboard
 with col_explain:
-    st.markdown("<h3 style='color: #60a5fa;'>🔍 Explainability Trace</h3>", unsafe_allowed_value=True)
+    st.markdown("<h3 style='color: #60a5fa;'>🔍 Explainability Trace</h3>", unsafe_allow_html=True)
     
     if st.session_state.last_explainability is None:
         st.info("Start a conversation to see the inner reasoning of the Digital Twin.")
@@ -262,7 +270,7 @@ with col_explain:
             <div class="metric-title">Response Confidence Score</div>
             <div class="metric-value">{exp.get('confidence_score', 'N/A')}</div>
         </div>
-        """, unsafe_allowed_value=True)
+        """, unsafe_allow_html=True)
 
         # Reasoning Path
         st.markdown(f"""
@@ -270,14 +278,14 @@ with col_explain:
             <div class="metric-title">Reasoning Path</div>
             <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.5rem;">{exp.get('reason_for_answer', 'N/A')}</p>
         </div>
-        """, unsafe_allowed_value=True)
+        """, unsafe_allow_html=True)
 
         # Retrieved Documents
-        st.markdown("<div class='card'>", unsafe_allowed_value=True)
-        st.markdown("<div class='metric-title'>Retrieved Knowledge Base (RAG)</div>", unsafe_allowed_value=True)
+        st.markdown("<div class='card'>", unsafe_allow_html=True)
+        st.markdown("<div class='metric-title'>Retrieved Knowledge Base (RAG)</div>", unsafe_allow_html=True)
         sources = exp.get("sources_used", [])
         if not sources:
-            st.markdown("<p style='color: #64748b; font-size: 0.9rem;'>No external document chunks retrieved.</p>", unsafe_allowed_value=True)
+            st.markdown("<p style='color: #64748b; font-size: 0.9rem;'>No external document chunks retrieved.</p>", unsafe_allow_html=True)
         else:
             for s in sources:
                 st.markdown(f"""
@@ -285,19 +293,19 @@ with col_explain:
                     <span class="source-tag">{s['source_file']}</span>
                     <span style="color: #10b981; font-size: 0.8rem;">Similarity: {int(s['relevance_score'] * 100)}%</span>
                 </div>
-                """, unsafe_allowed_value=True)
-        st.markdown("</div>", unsafe_allowed_value=True)
+                """, unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
         # Retrieved SQLite memory facts
-        st.markdown("<div class='card'>", unsafe_allowed_value=True)
-        st.markdown("<div class='metric-title'>SQLite Factual Memories</div>", unsafe_allowed_value=True)
+        st.markdown("<div class='card'>", unsafe_allow_html=True)
+        st.markdown("<div class='metric-title'>SQLite Factual Memories</div>", unsafe_allow_html=True)
         mems = exp.get("memories_used", [])
         if not mems:
-            st.markdown("<p style='color: #64748b; font-size: 0.9rem;'>No long-term memories retrieved.</p>", unsafe_allowed_value=True)
+            st.markdown("<p style='color: #64748b; font-size: 0.9rem;'>No long-term memories retrieved.</p>", unsafe_allow_html=True)
         else:
             for m in mems:
                 st.markdown(f"🧠 `{m}`")
-        st.markdown("</div>", unsafe_allowed_value=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
         # Prompt summary
         st.markdown(f"""
@@ -305,4 +313,4 @@ with col_explain:
             <div class="metric-title">Prompt Engine Metadata</div>
             <p style="color: #cbd5e1; font-size: 0.85rem; margin-top: 0.5rem; font-family: monospace;">{exp.get('prompt_summary', '')}</p>
         </div>
-        """, unsafe_allowed_value=True)
+        """, unsafe_allow_html=True)

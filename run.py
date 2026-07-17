@@ -2,12 +2,24 @@ import sys
 import argparse
 import subprocess
 import threading
+import os
+from pathlib import Path
 from app.config import Config
+
+# Auto-relaunch script using virtual environment python if not already running in it
+BASE_DIR = Path(__file__).resolve().parent
+venv_python = BASE_DIR / "venv" / "Scripts" / "python.exe"
+if venv_python.exists() and sys.executable != str(venv_python):
+    print(f"Detecting global Python. Relaunching in virtual environment: {venv_python}")
+    res = subprocess.run([str(venv_python)] + sys.argv)
+    sys.exit(res.returncode)
+
 
 def run_api():
     print(f"Starting API server on {Config.HOST}:{Config.PORT}...")
     import uvicorn
-    uvicorn.run("app.main:app", host=Config.HOST, port=Config.PORT, reload=Config.DEBUG)
+    # Disable reload=True to avoid threading signal exceptions on Windows
+    uvicorn.run("app.main:app", host=Config.HOST, port=Config.PORT, reload=False)
 
 def run_frontend():
     print("Starting Streamlit Frontend...")

@@ -81,13 +81,14 @@ def chat(
         # Store AI twin response
         memory_manager.add_message(session_id=session_id, role="assistant", content=final_response)
 
+        is_valid = validation["is_valid"]
+
         # 8. Generate explainability payload
         explainability = ExplainabilityEngine.create_explanation(
             query=query,
-            confidence=confidence,
+            is_valid=is_valid,
             rag_results=rag_results,
-            memories=memories,
-            validation_reason=validation_reason
+            memories=memories
         )
 
         return {
