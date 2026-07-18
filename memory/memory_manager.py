@@ -69,6 +69,9 @@ class MemoryManager:
     def save_fact(self, fact_key: str, fact_val: str):
         self.long_term.save_fact(fact_key, fact_val)
 
+    def delete_fact(self, fact_key: str):
+        self.long_term.delete_fact(fact_key)
+
     def get_relevant_facts(self, query: str) -> List[str]:
         """
         Searches both Long-Term factual SQLite and Semantic Chroma memories.

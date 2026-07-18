@@ -7,7 +7,7 @@ except Exception:
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import Config
-from app.routes import chat, audio, documents, health
+from app.routes import chat, audio, documents, health, memory, persona
 from utils.logger import get_logger
 
 logger = get_logger("main")
@@ -33,6 +33,8 @@ app.include_router(health.router)
 app.include_router(chat.router)
 app.include_router(audio.router)
 app.include_router(documents.router)
+app.include_router(memory.router)
+app.include_router(persona.router)
 
 @app.on_event("startup")
 def startup_event():

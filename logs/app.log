@@ -211,3 +211,13 @@ Basically, this i...'
 [2026-07-17 08:34:39,114] INFO [digital_twin.embedding_model:embedding_model.py:25] - Primary embedding model loaded successfully.
 [2026-07-17 08:35:22,355] INFO [digital_twin.embedding_model:embedding_model.py:21] - Loading embedding model 'BAAI/bge-large-en-v1.5' on device cpu...
 [2026-07-17 08:35:31,459] INFO [digital_twin.embedding_model:embedding_model.py:25] - Primary embedding model loaded successfully.
+[2026-07-18 19:23:22,264] INFO [digital_twin.long_term_memory:long_term_memory.py:22] - Saved long-term fact to SQLite: test_hobby
+[2026-07-18 19:23:22,292] INFO [digital_twin.long_term_memory:long_term_memory.py:41] - Deleted long-term fact from SQLite: test_hobby
+[2026-07-18 19:23:22,313] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu
+[2026-07-18 19:23:22,317] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu
+[2026-07-18 19:23:22,324] INFO [digital_twin.routes_persona:persona.py:89] - Switched active persona profile to: vasu_test
+[2026-07-18 19:23:22,339] INFO [digital_twin.persona_engine:persona_engine.py:40] - Created default persona profile at: C:\Users\vasud\OneDrive\Desktop\digital-human-twin\personality\personality_profiles\vasu_test.json
+[2026-07-18 19:23:22,359] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu_test
+[2026-07-18 19:23:22,369] INFO [digital_twin.routes_persona:persona.py:54] - Updated persona profile 'vasu_test' at: C:\Users\vasud\OneDrive\Desktop\digital-human-twin\personality\personality_profiles\vasu_test.json
+[2026-07-18 19:23:22,389] INFO [digital_twin.persona_engine:persona_engine.py:46] - Loaded persona profile: vasu_test
+[2026-07-18 19:23:22,396] INFO [digital_twin.routes_persona:persona.py:89] - Switched active persona profile to: vasu

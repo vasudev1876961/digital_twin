@@ -32,3 +32,12 @@ class LongTermMemory:
         except Exception as e:
             logger.error(f"Failed to fetch SQLite facts: {str(e)}")
             return {}
+
+    def delete_fact(self, key: str):
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute("DELETE FROM long_term_memory WHERE fact_key = ?", (key,))
+            self.conn.commit()
+            logger.info(f"Deleted long-term fact from SQLite: {key}")
+        except Exception as e:
+            logger.error(f"Failed to delete fact: {str(e)}")
